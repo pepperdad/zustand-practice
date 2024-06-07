@@ -1,14 +1,12 @@
 import styled from "styled-components";
-import { useMemoStore } from "../store/MemoList";
 
 const MemoElem = (props) => {
   const { children, id } = props;
-  const { removeMemo } = useMemoStore();
 
   return (
     <MemoWrapper>
       <div>{children}</div>
-      <RemoveButton onClick={() => removeMemo(id)}>삭제</RemoveButton>
+      <RemoveButton>삭제</RemoveButton>
     </MemoWrapper>
   );
 };

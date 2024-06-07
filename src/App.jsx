@@ -1,10 +1,11 @@
+import { useState } from "react";
 import MemoBoard from "./components/MemoBoard";
 import MemoElem from "./components/MemoElem";
 import MemoInput from "./components/MemoInput";
-import { useMemoStore } from "./store/MemoList";
 
 const App = () => {
-  const { memoList } = useMemoStore();
+  const [memoList, setMemoList] = useState([]);
+
   return (
     <>
       <MemoBoard>
